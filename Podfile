@@ -11,5 +11,5 @@ target 'RCI' do
 	pod 'Fabric'
 	pod 'GoogleMaps'
 	pod 'AFNetworking'
-	
+	pod 'ImagePicker'
 end

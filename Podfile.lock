@@ -22,6 +22,7 @@ PODS:
   - GoogleMaps/Base (2.1.1)
   - GoogleMaps/Maps (2.1.1):
     - GoogleMaps/Base
+  - ImagePicker (2.0.0)
   - SVProgressHUD (2.0.4)
 
 DEPENDENCIES:
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - GoogleMaps
+  - ImagePicker
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -36,8 +38,9 @@ SPEC CHECKSUMS:
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  ImagePicker: 81175d36c2852cb543cb4f5d6c19e28f3e8d90eb
   SVProgressHUD: bfde85ed6c573ea802b9cb37894ed9b629034f1b
 
-PODFILE CHECKSUM: 51ba3f0786c847cff043d9d5f50377d62b6222f7
+PODFILE CHECKSUM: e70b1a35677e1db4372fd65d80eba5516b683b06
 
 COCOAPODS: 1.1.1

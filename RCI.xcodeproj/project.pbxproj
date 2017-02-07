@@ -7,22 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A8DDEE01E49DDCA0035E4DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DDEDF1E49DDCA0035E4DF /* AppDelegate.swift */; };
-		2A8DDEE21E49DDCA0035E4DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DDEE11E49DDCA0035E4DF /* ViewController.swift */; };
-		2A8DDEE51E49DDCA0035E4DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8DDEE31E49DDCA0035E4DF /* Main.storyboard */; };
-		2A8DDEE71E49DDCA0035E4DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A8DDEE61E49DDCA0035E4DF /* Assets.xcassets */; };
-		2A8DDEEA1E49DDCA0035E4DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8DDEE81E49DDCA0035E4DF /* LaunchScreen.storyboard */; };
+		2A37DD791E4A3C7400413601 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */; };
+		2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */; };
+		2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */; };
+		2A37DD7F1E4A67A600413601 /* KeyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7E1E4A67A600413601 /* KeyFile.swift */; };
+		2A5AC7E31E4A0C2300F7148C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7DB1E4A0C2300F7148C /* AppDelegate.swift */; };
+		2A5AC7E41E4A0C2300F7148C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */; };
+		2A5AC7E51E4A0C2300F7148C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5AC7DE1E4A0C2300F7148C /* LaunchScreen.storyboard */; };
+		2A5AC7E61E4A0C2300F7148C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5AC7E01E4A0C2300F7148C /* Main.storyboard */; };
+		2A5AC7E71E4A0C2300F7148C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A5AC7E21E4A0C2300F7148C /* Info.plist */; };
+		2A5AC7F41E4A0F2700F7148C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7F31E4A0F2700F7148C /* AppColors.swift */; };
+		2A5AC7F61E4A104300F7148C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7F51E4A104300F7148C /* MainViewController.swift */; };
+		2A5AC7F81E4A13C900F7148C /* MainControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */; };
 		D0584706812E7BCF90FA2B82 /* Pods_RCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0BBE3248741E058B1D407F /* Pods_RCI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Light.otf"; path = "Resourses/Fonts/SFUIText-Light.otf"; sourceTree = "<group>"; };
+		2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoyalAssistViewController.swift; sourceTree = "<group>"; };
+		2A37DD7E1E4A67A600413601 /* KeyFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFile.swift; sourceTree = "<group>"; };
+		2A5AC7DB1E4A0C2300F7148C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
+		2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
+		2A5AC7DF1E4A0C2300F7148C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A5AC7E11E4A0C2300F7148C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		2A5AC7E21E4A0C2300F7148C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		2A5AC7EE1E4A0C4000F7148C /* RCI-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RCI-Bridging-Header.h"; path = "Supporting Files/RCI-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A5AC7F31E4A0F2700F7148C /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppColors.swift; path = Extentios/AppColors.swift; sourceTree = "<group>"; };
+		2A5AC7F51E4A104300F7148C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainControllerCell.swift; sourceTree = "<group>"; };
 		2A8DDEDC1E49DDCA0035E4DF /* RCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A8DDEDF1E49DDCA0035E4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A8DDEE11E49DDCA0035E4DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A8DDEE41E49DDCA0035E4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A8DDEE61E49DDCA0035E4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A8DDEE91E49DDCA0035E4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2A8DDEEB1E49DDCA0035E4DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58729DB5D7A65D0D9DFE2DF6 /* Pods-RCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCI/Pods-RCI.release.xcconfig"; sourceTree = "<group>"; };
 		976DA75A29B39A24C3FA8AA7 /* Pods-RCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCI/Pods-RCI.debug.xcconfig"; sourceTree = "<group>"; };
 		9E0BBE3248741E058B1D407F /* Pods_RCI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RCI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +63,105 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2A37DD751E4A3BFB00413601 /* Resoruses */ = {
+			isa = PBXGroup;
+			children = (
+				2A37DD761E4A3C1500413601 /* Fonts */,
+				2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */,
+				2A37DD7E1E4A67A600413601 /* KeyFile.swift */,
+			);
+			name = Resoruses;
+			sourceTree = "<group>";
+		};
+		2A37DD761E4A3C1500413601 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2A5AC7D81E4A0B9C00F7148C /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7EE1E4A0C4000F7148C /* RCI-Bridging-Header.h */,
+				2A5AC7DB1E4A0C2300F7148C /* AppDelegate.swift */,
+				2A5AC7DD1E4A0C2300F7148C /* Base.lproj */,
+				2A5AC7E21E4A0C2300F7148C /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		2A5AC7DD1E4A0C2300F7148C /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7DE1E4A0C2300F7148C /* LaunchScreen.storyboard */,
+				2A5AC7E01E4A0C2300F7148C /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = "Supporting Files/Base.lproj";
+			sourceTree = "<group>";
+		};
+		2A5AC7E81E4A0C2C00F7148C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7EF1E4A0EA800F7148C /* Extensions */,
+				2A5AC7E91E4A0C2C00F7148C /* Managers */,
+				2A5AC7EA1E4A0C2C00F7148C /* Models */,
+				2A5AC7EB1E4A0C2C00F7148C /* ViewControllers */,
+				2A5AC7EC1E4A0C2C00F7148C /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2A5AC7E91E4A0C2C00F7148C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2A5AC7EA1E4A0C2C00F7148C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2A5AC7EB1E4A0C2C00F7148C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7F51E4A104300F7148C /* MainViewController.swift */,
+				2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */,
+				2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2A5AC7EC1E4A0C2C00F7148C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7ED1E4A0C2C00F7148C /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2A5AC7ED1E4A0C2C00F7148C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2A5AC7EF1E4A0EA800F7148C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A5AC7F31E4A0F2700F7148C /* AppColors.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		2A8DDED31E49DDC90035E4DF = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +183,9 @@
 		2A8DDEDE1E49DDCA0035E4DF /* RCI */ = {
 			isa = PBXGroup;
 			children = (
-				2A8DDEDF1E49DDCA0035E4DF /* AppDelegate.swift */,
-				2A8DDEE11E49DDCA0035E4DF /* ViewController.swift */,
-				2A8DDEE31E49DDCA0035E4DF /* Main.storyboard */,
-				2A8DDEE61E49DDCA0035E4DF /* Assets.xcassets */,
-				2A8DDEE81E49DDCA0035E4DF /* LaunchScreen.storyboard */,
-				2A8DDEEB1E49DDCA0035E4DF /* Info.plist */,
+				2A37DD751E4A3BFB00413601 /* Resoruses */,
+				2A5AC7E81E4A0C2C00F7148C /* Classes */,
+				2A5AC7D81E4A0B9C00F7148C /* Supporting files */,
 			);
 			path = RCI;
 			sourceTree = "<group>";
@@ -124,6 +234,7 @@
 					2A8DDEDB1E49DDC90035E4DF = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = X24R65DM8E;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,9 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8DDEEA1E49DDCA0035E4DF /* LaunchScreen.storyboard in Resources */,
-				2A8DDEE71E49DDCA0035E4DF /* Assets.xcassets in Resources */,
-				2A8DDEE51E49DDCA0035E4DF /* Main.storyboard in Resources */,
+				2A37DD791E4A3C7400413601 /* SFUIText-Light.otf in Resources */,
+				2A5AC7E71E4A0C2300F7148C /* Info.plist in Resources */,
+				2A5AC7E61E4A0C2300F7148C /* Main.storyboard in Resources */,
+				2A5AC7E41E4A0C2300F7148C /* Assets.xcassets in Resources */,
+				2A5AC7E51E4A0C2300F7148C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,28 +325,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A8DDEE21E49DDCA0035E4DF /* ViewController.swift in Sources */,
-				2A8DDEE01E49DDCA0035E4DF /* AppDelegate.swift in Sources */,
+				2A5AC7F81E4A13C900F7148C /* MainControllerCell.swift in Sources */,
+				2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */,
+				2A5AC7F61E4A104300F7148C /* MainViewController.swift in Sources */,
+				2A5AC7E31E4A0C2300F7148C /* AppDelegate.swift in Sources */,
+				2A37DD7F1E4A67A600413601 /* KeyFile.swift in Sources */,
+				2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */,
+				2A5AC7F41E4A0F2700F7148C /* AppColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2A8DDEE31E49DDCA0035E4DF /* Main.storyboard */ = {
+		2A5AC7DE1E4A0C2300F7148C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A8DDEE41E49DDCA0035E4DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2A8DDEE81E49DDCA0035E4DF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A8DDEE91E49DDCA0035E4DF /* Base */,
+				2A5AC7DF1E4A0C2300F7148C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2A5AC7E01E4A0C2300F7148C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A5AC7E11E4A0C2300F7148C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -335,11 +453,14 @@
 			baseConfigurationReference = 976DA75A29B39A24C3FA8AA7 /* Pods-RCI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X24R65DM8E;
-				INFOPLIST_FILE = RCI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RCI/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Imp.RCI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RCI/Supporting Files/RCI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -349,11 +470,13 @@
 			baseConfigurationReference = 58729DB5D7A65D0D9DFE2DF6 /* Pods-RCI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = X24R65DM8E;
-				INFOPLIST_FILE = RCI/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/RCI/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Imp.RCI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RCI/Supporting Files/RCI-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -377,6 +500,7 @@
 				2A8DDEF01E49DDCA0035E4DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
