@@ -10,7 +10,16 @@
 		2A37DD791E4A3C7400413601 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */; };
 		2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */; };
 		2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */; };
-		2A37DD7F1E4A67A600413601 /* KeyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7E1E4A67A600413601 /* KeyFile.swift */; };
+		2A37DD811E4A788A00413601 /* ReportAccidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD801E4A788A00413601 /* ReportAccidentViewController.swift */; };
+		2A37DD851E4A82C500413601 /* SFUIText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37DD841E4A82C500413601 /* SFUIText-Semibold.otf */; };
+		2A51C9C61E4B6504001A18DA /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9C51E4B6504001A18DA /* PhotoCell.swift */; };
+		2A51C9D01E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9C91E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.m */; };
+		2A51C9D11E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9CB1E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.m */; };
+		2A51C9D21E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9CD1E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m */; };
+		2A51C9D31E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9CF1E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		2A51C9D61E4B8084001A18DA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9D51E4B8084001A18DA /* APIManager.swift */; };
+		2A51C9D91E4BC754001A18DA /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9D81E4BC754001A18DA /* InfoViewController.swift */; };
+		2A51C9DB1E4BD228001A18DA /* TextViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51C9DA1E4BD228001A18DA /* TextViewColor.swift */; };
 		2A5AC7E31E4A0C2300F7148C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7DB1E4A0C2300F7148C /* AppDelegate.swift */; };
 		2A5AC7E41E4A0C2300F7148C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */; };
 		2A5AC7E51E4A0C2300F7148C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5AC7DE1E4A0C2300F7148C /* LaunchScreen.storyboard */; };
@@ -19,6 +28,9 @@
 		2A5AC7F41E4A0F2700F7148C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7F31E4A0F2700F7148C /* AppColors.swift */; };
 		2A5AC7F61E4A104300F7148C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7F51E4A104300F7148C /* MainViewController.swift */; };
 		2A5AC7F81E4A13C900F7148C /* MainControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */; };
+		2A6748051E4B1D930090D62E /* KeyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6748041E4B1D930090D62E /* KeyFile.swift */; };
+		2A6748081E4B1DA20090D62E /* SFUIText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */; };
+		2A6748091E4B1DA20090D62E /* SFUIText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */; };
 		D0584706812E7BCF90FA2B82 /* Pods_RCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0BBE3248741E058B1D407F /* Pods_RCI.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +38,20 @@
 		2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Light.otf"; path = "Resourses/Fonts/SFUIText-Light.otf"; sourceTree = "<group>"; };
 		2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoyalAssistViewController.swift; sourceTree = "<group>"; };
-		2A37DD7E1E4A67A600413601 /* KeyFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFile.swift; sourceTree = "<group>"; };
+		2A37DD801E4A788A00413601 /* ReportAccidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportAccidentViewController.swift; sourceTree = "<group>"; };
+		2A37DD841E4A82C500413601 /* SFUIText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Semibold.otf"; path = "Resourses/Fonts/SFUIText-Semibold.otf"; sourceTree = "<group>"; };
+		2A51C9C51E4B6504001A18DA /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		2A51C9C81E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		2A51C9C91E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		2A51C9CA1E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		2A51C9CB1E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		2A51C9CC1E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		2A51C9CD1E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		2A51C9CE1E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		2A51C9CF1E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		2A51C9D51E4B8084001A18DA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2A51C9D81E4BC754001A18DA /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		2A51C9DA1E4BD228001A18DA /* TextViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewColor.swift; sourceTree = "<group>"; };
 		2A5AC7DB1E4A0C2300F7148C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Supporting Files/AppDelegate.swift"; sourceTree = "<group>"; };
 		2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Supporting Files/Assets.xcassets"; sourceTree = "<group>"; };
 		2A5AC7DF1E4A0C2300F7148C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +61,9 @@
 		2A5AC7F31E4A0F2700F7148C /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppColors.swift; path = Extentios/AppColors.swift; sourceTree = "<group>"; };
 		2A5AC7F51E4A104300F7148C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainControllerCell.swift; sourceTree = "<group>"; };
+		2A6748041E4B1D930090D62E /* KeyFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyFile.swift; path = Resourses/KeyFile.swift; sourceTree = "<group>"; };
+		2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Medium.otf"; path = "Resourses/Fonts/SFUIText-Medium.otf"; sourceTree = "<group>"; };
+		2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Regular.otf"; path = "Resourses/Fonts/SFUIText-Regular.otf"; sourceTree = "<group>"; };
 		2A8DDEDC1E49DDCA0035E4DF /* RCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58729DB5D7A65D0D9DFE2DF6 /* Pods-RCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCI/Pods-RCI.release.xcconfig"; sourceTree = "<group>"; };
 		976DA75A29B39A24C3FA8AA7 /* Pods-RCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCI/Pods-RCI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,9 +94,9 @@
 		2A37DD751E4A3BFB00413601 /* Resoruses */ = {
 			isa = PBXGroup;
 			children = (
+				2A6748041E4B1D930090D62E /* KeyFile.swift */,
 				2A37DD761E4A3C1500413601 /* Fonts */,
 				2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */,
-				2A37DD7E1E4A67A600413601 /* KeyFile.swift */,
 			);
 			name = Resoruses;
 			sourceTree = "<group>";
@@ -76,9 +104,37 @@
 		2A37DD761E4A3C1500413601 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */,
+				2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */,
+				2A37DD841E4A82C500413601 /* SFUIText-Semibold.otf */,
 				2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2A51C9C41E4B5386001A18DA /* RoyalAssist */ = {
+			isa = PBXGroup;
+			children = (
+				2A37DD801E4A788A00413601 /* ReportAccidentViewController.swift */,
+				2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */,
+			);
+			name = RoyalAssist;
+			sourceTree = "<group>";
+		};
+		2A51C9C71E4B7D1F001A18DA /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				2A51C9C81E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.h */,
+				2A51C9C91E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.m */,
+				2A51C9CA1E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.h */,
+				2A51C9CB1E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.m */,
+				2A51C9CC1E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.h */,
+				2A51C9CD1E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m */,
+				2A51C9CE1E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				2A51C9CF1E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = TPKeyboardAvoiding;
+			path = Extentios/TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		2A5AC7D81E4A0B9C00F7148C /* Supporting files */ = {
@@ -117,6 +173,7 @@
 		2A5AC7E91E4A0C2C00F7148C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				2A51C9D51E4B8084001A18DA /* APIManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -131,9 +188,10 @@
 		2A5AC7EB1E4A0C2C00F7148C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A51C9C41E4B5386001A18DA /* RoyalAssist */,
 				2A5AC7F51E4A104300F7148C /* MainViewController.swift */,
 				2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */,
-				2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */,
+				2A51C9D81E4BC754001A18DA /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */,
+				2A51C9C51E4B6504001A18DA /* PhotoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -157,7 +216,9 @@
 		2A5AC7EF1E4A0EA800F7148C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2A51C9C71E4B7D1F001A18DA /* TPKeyboardAvoiding */,
 				2A5AC7F31E4A0F2700F7148C /* AppColors.swift */,
+				2A51C9DA1E4BD228001A18DA /* TextViewColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -262,10 +323,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6748081E4B1DA20090D62E /* SFUIText-Medium.otf in Resources */,
 				2A37DD791E4A3C7400413601 /* SFUIText-Light.otf in Resources */,
 				2A5AC7E71E4A0C2300F7148C /* Info.plist in Resources */,
 				2A5AC7E61E4A0C2300F7148C /* Main.storyboard in Resources */,
 				2A5AC7E41E4A0C2300F7148C /* Assets.xcassets in Resources */,
+				2A37DD851E4A82C500413601 /* SFUIText-Semibold.otf in Resources */,
+				2A6748091E4B1DA20090D62E /* SFUIText-Regular.otf in Resources */,
 				2A5AC7E51E4A0C2300F7148C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,13 +389,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A51C9D01E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				2A5AC7F81E4A13C900F7148C /* MainControllerCell.swift in Sources */,
+				2A51C9C61E4B6504001A18DA /* PhotoCell.swift in Sources */,
+				2A51C9D31E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				2A6748051E4B1D930090D62E /* KeyFile.swift in Sources */,
 				2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */,
+				2A51C9D61E4B8084001A18DA /* APIManager.swift in Sources */,
+				2A51C9D11E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2A5AC7F61E4A104300F7148C /* MainViewController.swift in Sources */,
 				2A5AC7E31E4A0C2300F7148C /* AppDelegate.swift in Sources */,
-				2A37DD7F1E4A67A600413601 /* KeyFile.swift in Sources */,
 				2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */,
+				2A51C9D21E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m in Sources */,
+				2A51C9D91E4BC754001A18DA /* InfoViewController.swift in Sources */,
+				2A51C9DB1E4BD228001A18DA /* TextViewColor.swift in Sources */,
 				2A5AC7F41E4A0F2700F7148C /* AppColors.swift in Sources */,
+				2A37DD811E4A788A00413601 /* ReportAccidentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

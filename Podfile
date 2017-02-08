@@ -12,4 +12,5 @@ target 'RCI' do
 	pod 'GoogleMaps'
 	pod 'AFNetworking'
 	pod 'ImagePicker'
+    pod 'TextFieldEffects'
 end

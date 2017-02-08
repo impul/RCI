@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need acess to media library</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Need acess to media library</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need acess to your camera</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -9,10 +15,11 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
+		<string>SFUIText-Medium.otf</string>
+		<string>SFUIText-Regular.otf</string>
+		<string>SFUIText-Semibold.otf</string>
+		<string>SFUIText-Light.otf</string>
 	</array>
-	<key>SFUIText-Light</key>
-	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -42,8 +49,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
