@@ -29,7 +29,7 @@ class ReportAccidentViewController: BaseViewController , UICollectionViewDelegat
     
     @IBAction func reportAction(_ sender: Any) {
         if iAgreeSwitch.isOn {
-            APIManager.sharedInstance.postAccident(name: nameTextField.text!, regNumber: registrationNumber.text! , phone: telephoneNumber.text!, photos: photosArray, completion: { (info, success) in
+            APIManager.sharedInstance.postAccident(name: nameTextField.text!, regNumber: registrationNumber.text! , phone: telephoneNumber.text!, photos: generateDataPhotoArray(), completion: { (info, success) in
                 if (success) {
                     SVProgressHUD.showSuccess(withStatus: info)
                     SVProgressHUD.dismiss(withDelay: 1, completion: {
@@ -73,6 +73,15 @@ class ReportAccidentViewController: BaseViewController , UICollectionViewDelegat
     func deletePhoto(atIndex: Int) {
         self.photosArray .remove(at: atIndex)
         self.collectionView.reloadData()
+    }
+    
+    func generateDataPhotoArray() -> [Data] {
+        var dataArray:Array<Data> = []
+        for image:UIImage in photosArray {
+            dataArray.append(UIImageJPEGRepresentation(image, 1)!)
+        }
+        return dataArray
+        
     }
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {}

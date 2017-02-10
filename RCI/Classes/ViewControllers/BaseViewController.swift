@@ -35,6 +35,7 @@ class BaseViewController : UIViewController {
         title.font = UIFont.init(name: "SFUIText-Semibold", size: 17)
         title.textColor = UIColor.defaultBlueColor()
         self.navigationItem.titleView = title
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white 
     }
     
     func presentController<T>(nameController:T) {

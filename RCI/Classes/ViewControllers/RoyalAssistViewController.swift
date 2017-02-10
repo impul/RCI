@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 class RoyalAssistViewController: BaseViewController , UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -30,7 +31,7 @@ class RoyalAssistViewController: BaseViewController , UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height*0.292)
+            return CGSize(width: self.view.frame.size.width, height:(collectionView.frame.size.height-83)/3)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -47,15 +48,18 @@ class RoyalAssistViewController: BaseViewController , UICollectionViewDelegate, 
     }
     
     func showInfo() {
-        let textStr = "The Road Assistance Services Royal Assist is available to you 24 hours each day and 365 each year, and can arrange the transportation of your immobilised vehicle using state-of-art trailer and crane lorries, to the service centre of your preference or your place of residence free of charge. It also offers minor repair and mechanical and electrical fault repair services, water, fuel or oil shortage services, tyre change services, unlocking or restarting services, as well as noise checks in the engine, the gearbox or tyres.Furthermore, this collaboration creates a breakthrough in terms of speedy service in the case that you are involved in a road traffic accident, as qualified staff will meet you at the scene and assist in any way possible.In the case of accident or need for Road Services, just call 77.77.77.73 for immediate assistance."
-        let controller:InfoViewController = (self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController)
-        controller.HTMLText = textStr
-        controller.infoTitle = "About royal assist"
-        self.navigationController?.pushViewController(controller, animated: true)
-
-//        APIManager.sharedInstance.getAboutAccident { (info, result) in
-//            
-//        }
+        APIManager.sharedInstance.getAboutAccident { (result, succes) in
+            if succes {
+                let controller:InfoViewController = (self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController)
+                controller.HTMLText = result
+                controller.infoTitle = "About royal assist"
+                
+                self.navigationController?.pushViewController(controller, animated: true)
+            } else {
+                SVProgressHUD.showError(withStatus: result)
+            }
+        }
+        
     }
     
     func makeACall(){

@@ -9,4 +9,8 @@
 import Foundation
 
 let supportPhoneNumber:String = "77777773"
-let baseAPIUrl:URL = URL.init(string:"http://31.131.20.12:82/api/v1/")! 
+
+let baseAPIURL:String = "http://31.131.20.12:82/api/v1/"
+let accidentReportURL:String = baseAPIURL + "accident_reports"
+let aboutAssistURL:String = baseAPIURL + "about_royal_assist"
+let servicesURL:String = baseAPIURL + "services?"

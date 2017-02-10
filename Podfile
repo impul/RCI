@@ -10,7 +10,8 @@ target 'RCI' do
 	pod 'Crashlytics'
 	pod 'Fabric'
 	pod 'GoogleMaps'
-	pod 'AFNetworking'
 	pod 'ImagePicker'
     pod 'TextFieldEffects'
+    pod 'Alamofire'
+
 end

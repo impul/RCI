@@ -43,6 +43,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         switch indexPath.row {
         case 0:
             customPushController(name: "RoyalAssistViewController",atIndex: indexPath.row)
+            break
+        case 1:
+            break
+        case 2:
+            customPushController(name: "ServicesViewController",atIndex: indexPath.row)
+            break
         default:
             break
         }
