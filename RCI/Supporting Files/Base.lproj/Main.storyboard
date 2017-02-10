@@ -63,7 +63,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainControllerCell" id="l9G-Gj-8N3" customClass="MainControllerCell" customModule="RCI">
-                                        <rect key="frame" x="83.5" y="0.0" width="208" height="197"/>
+                                        <rect key="frame" x="84" y="0.0" width="208" height="197"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="208" height="197"/>
@@ -471,41 +471,6 @@
             </objects>
             <point key="canvasLocation" x="2290" y="-1173"/>
         </scene>
-        <!--Info View Controller-->
-        <scene sceneID="CXm-Zd-9ZJ">
-            <objects>
-                <viewController storyboardIdentifier="InfoViewController" id="p8T-0N-qxb" customClass="InfoViewController" customModule="RCI" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uyv-58-thW"/>
-                        <viewControllerLayoutGuide type="bottom" id="gCQ-pb-Djz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JxJ-BV-SkM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="SOx-1R-e30">
-                                <rect key="frame" x="15" y="25" width="345" height="627"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.18823529410000001" green="0.16862745100000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="SOx-1R-e30" firstAttribute="leading" secondItem="JxJ-BV-SkM" secondAttribute="leading" constant="15" id="2yb-WJ-tdL"/>
-                            <constraint firstAttribute="trailing" secondItem="SOx-1R-e30" secondAttribute="trailing" constant="15" id="Khi-v7-oJV"/>
-                            <constraint firstItem="SOx-1R-e30" firstAttribute="top" secondItem="JxJ-BV-SkM" secondAttribute="top" constant="25" id="d0m-Ds-JpU"/>
-                            <constraint firstItem="gCQ-pb-Djz" firstAttribute="top" secondItem="SOx-1R-e30" secondAttribute="bottom" constant="15" id="zIo-wL-8LL"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="SOx-1R-e30" id="10K-o2-N4i"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R2i-yq-OY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2958" y="-1143"/>
-        </scene>
         <!--Services View Controller-->
         <scene sceneID="YwX-Sy-OgI">
             <objects>
@@ -600,11 +565,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTv-GJ-cpN" id="MtX-kJ-7h9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VJM-0D-jdG">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="71.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="71"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="SFUIText-Regular" family="SF UI  Text" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -639,7 +604,7 @@
         <!--Info View Controller-->
         <scene sceneID="Q9g-Hk-jPI">
             <objects>
-                <viewController storyboardIdentifier="ServiceInfoViewController" id="ODX-dF-f5N" customClass="InfoViewController" customModule="RCI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InfoViewController" id="ODX-dF-f5N" customClass="InfoViewController" customModule="RCI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mfc-3n-rYS"/>
                         <viewControllerLayoutGuide type="bottom" id="wSv-9f-RaI"/>
@@ -648,8 +613,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVH-mk-c6F">
-                                <rect key="frame" x="15" y="0.0" width="345" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVH-mk-c6F">
+                                <rect key="frame" x="15" y="64" width="345" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="bag-wL-mHa"/>
                                 </constraints>
@@ -658,7 +623,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="6kf-Fk-EgM">
-                                <rect key="frame" x="15" y="74" width="345" height="578"/>
+                                <rect key="frame" x="15" y="138" width="345" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.18823529410000001" green="0.16862745100000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -668,7 +633,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6kf-Fk-EgM" secondAttribute="trailing" constant="15" id="Gue-z8-jLb"/>
                             <constraint firstItem="6kf-Fk-EgM" firstAttribute="leading" secondItem="ezb-BU-lkO" secondAttribute="leading" constant="15" id="JRi-nw-ViT"/>
-                            <constraint firstItem="vVH-mk-c6F" firstAttribute="top" secondItem="ezb-BU-lkO" secondAttribute="top" id="JUW-nh-14b"/>
+                            <constraint firstItem="vVH-mk-c6F" firstAttribute="top" secondItem="ezb-BU-lkO" secondAttribute="top" constant="64" id="JUW-nh-14b"/>
                             <constraint firstAttribute="trailing" secondItem="vVH-mk-c6F" secondAttribute="trailing" constant="15" id="K9a-TJ-6VD"/>
                             <constraint firstAttribute="trailing" secondItem="vVH-mk-c6F" secondAttribute="trailing" constant="15" id="fmh-ER-WHW"/>
                             <constraint firstItem="wSv-9f-RaI" firstAttribute="top" secondItem="6kf-Fk-EgM" secondAttribute="bottom" constant="15" id="gag-FQ-E6m"/>
@@ -679,6 +644,7 @@
                     </view>
                     <connections>
                         <outlet property="titleService" destination="vVH-mk-c6F" id="KG2-Gv-Izj"/>
+                        <outlet property="topConstraint" destination="JUW-nh-14b" id="Ogq-O1-OSv"/>
                         <outlet property="webView" destination="6kf-Fk-EgM" id="u5g-2i-m0R"/>
                     </connections>
                 </viewController>

@@ -10,20 +10,57 @@ import Foundation
 import Alamofire
 
 private let sharedManager = APIManager()
+
 class APIManager: NSObject {
+ 
+//MARK: - Singltone 
     
     class var sharedInstance: APIManager {
         return sharedManager
     }
     
-    func postAccident(name:String, regNumber:String, phone:String, photos:Array<Data>,  completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
-        let parametrs = ["name":name,"reg_policy_number":regNumber,"phone_number":phone , "photos_attributes":photos ] as [String : Any]
+//MARK: - Constants
+    static let baseAPIURL = "http://31.131.20.12:82/api/v1/"
+    
+    struct AppUrls {
+        static let accidentReportURL = baseAPIURL + "accident_reports"
+        static let aboutAssistURL = baseAPIURL + "about_royal_assist"
+        static let servicesURL = baseAPIURL + "services?"
+    }
+    
+    struct Parametrs {
+        static let name = "name"
+        static let regPolicy = "reg_policy_number"
+        static let phoneNumber = "phone_number"
+        static let photosAttributes = "photos_attributes"
+        static let perPage = "per_page"
+        static let sortColumn = "sort_column"
+        static let sortType = "sort_type"
+        static let serviceType =  "service_type"
         
-        Alamofire.request(accidentReportURL , method:.post, parameters: parametrs, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
+    }
+    
+    struct ServerResponce {
+        static let wrondResponce = "Wrond server responce!"
+    }
+
+//MARK: - APIRequests
+    
+    func postAccident(name: String, regNumber: String, phone:String, photos: [Data],  completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
+        let parametrs = [Parametrs.name: name,
+                         Parametrs.regPolicy: regNumber,
+                         Parametrs.phoneNumber: phone]
+            as [String : Any]
+        
+        Alamofire.request(AppUrls.accidentReportURL , method:.post, parameters: parametrs, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
             switch response.result {
             case .success:
                 let json = response.result.value as? [String: Any]
-              completion((json?["about_royal_assist"]  as? String)!, true)
+                guard let info = json?["message"]  as? String else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+              completion(info, true)
             case .failure(let error):
                 completion(error.localizedDescription, false)
             }
@@ -32,11 +69,15 @@ class APIManager: NSObject {
     }
     
     func getAboutAccident(completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
-        Alamofire.request(aboutAssistURL).validate().responseJSON { response in
+        Alamofire.request(AppUrls.aboutAssistURL).validate().responseJSON { response in
             switch response.result {
             case .success:
                 let json = response.result.value as? [String: Any]
-                completion((json?["about_royal_assist"]  as? String)!, true)
+                guard let info = json?["about_royal_assist"]  as? String else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                completion(info, true)
             case .failure(let error):
                 completion(error.localizedDescription, false)
             }
@@ -44,15 +85,21 @@ class APIManager: NSObject {
     }
     
     func getServices(withType:String, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
-        let parametrs = ["per_page":"999","sort_column":"id","sort_type":"asc","service_type":withType] as [String : Any]
-        let URL = servicesURL + parametrs.stringFromHttpParameters()
+        let parametrs = [Parametrs.perPage: "999",
+                         Parametrs.sortColumn: "id",
+                         Parametrs.sortType: "asc",
+                         Parametrs.serviceType: withType]
+        let URL = AppUrls.servicesURL + parametrs.stringFromHttpParameters()
         
        Alamofire.request(URL).validate().responseJSON { (response) in
             switch response.result {
             case .success:
-                let dataArray:Array<Any> = (response.result.value as? Array<Any>)!
-                var objectArray:Array<Service> = []
-                for obj:Any in dataArray {
+                guard let dataArray:[Any] = (response.result.value as? [Any]) else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                var objectArray: [Service] = []
+                for obj in dataArray {
                     do {
                         let service = try Service(JSONDecoder(obj))
                         objectArray.append(service)

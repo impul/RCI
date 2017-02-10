@@ -12,7 +12,7 @@ import TextFieldEffects
 import ImagePicker
 import SVProgressHUD
 
-class ReportAccidentViewController: BaseViewController , UICollectionViewDelegate, UICollectionViewDataSource, DeletePhotoProtocol, ImagePickerDelegate{
+class ReportAccidentViewController: UIViewController , DeletePhotoProtocol, ImagePickerDelegate{
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var telephoneNumber: HoshiTextField!
@@ -20,20 +20,21 @@ class ReportAccidentViewController: BaseViewController , UICollectionViewDelegat
     @IBOutlet weak var nameTextField: HoshiTextField!
     @IBOutlet weak var iAgreeSwitch: UISwitch!
     
-    var photosArray:Array<UIImage> = []
+    var photosArray:[UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setTitle(titleString: "Accident report")
     }
     
     @IBAction func reportAction(_ sender: Any) {
         if iAgreeSwitch.isOn {
-            APIManager.sharedInstance.postAccident(name: nameTextField.text!, regNumber: registrationNumber.text! , phone: telephoneNumber.text!, photos: generateDataPhotoArray(), completion: { (info, success) in
+            APIManager.sharedInstance.postAccident(name: nameTextField.text!, regNumber: registrationNumber.text! , phone: telephoneNumber.text!, photos: generateDataPhotoArray(), completion: { [weak self] (info, success) in
                 if (success) {
                     SVProgressHUD.showSuccess(withStatus: info)
                     SVProgressHUD.dismiss(withDelay: 1, completion: {
-                        self.backButtonAction()
+                        self?.backButtonAction()
                     })
                 } else {
                     SVProgressHUD.showError(withStatus: info)
@@ -44,8 +45,40 @@ class ReportAccidentViewController: BaseViewController , UICollectionViewDelegat
         }
     }
     
+    func generateDataPhotoArray() -> [Data] {
+        var dataArray:[Data] = []
+        for image in photosArray {
+            dataArray.append(UIImageJPEGRepresentation(image, 1)!)
+        }
+        return dataArray
+        
+    }
+    
+//MARK: - DeletePhotoProtocol
+    
+    func deletePhoto(atIndex: Int) {
+        photosArray.remove(at: atIndex)
+        collectionView.reloadData()
+    }
+ 
+//MARK: - ImagePicker
+    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {}
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {}
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
+        photosArray = photosArray + images
+        collectionView.reloadData()
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension ReportAccidentViewController :  UICollectionViewDelegate, UICollectionViewDataSource {
+
+//MARK: - UICollectionViewDataSource
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photosArray.count+1;
+        return photosArray.count+1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,35 +94,14 @@ class ReportAccidentViewController: BaseViewController , UICollectionViewDelegat
         }
     }
     
+//MARK: - UICollectionViewDelegate
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let imagePickerController = ImagePickerController()
             imagePickerController.delegate = self
-            
             present(imagePickerController, animated: true, completion: nil)
         }
     }
-    
-    func deletePhoto(atIndex: Int) {
-        self.photosArray .remove(at: atIndex)
-        self.collectionView.reloadData()
-    }
-    
-    func generateDataPhotoArray() -> [Data] {
-        var dataArray:Array<Data> = []
-        for image:UIImage in photosArray {
-            dataArray.append(UIImageJPEGRepresentation(image, 1)!)
-        }
-        return dataArray
-        
-    }
-    
-    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {}
-    func cancelButtonDidPress(_ imagePicker: ImagePickerController) {}
-    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        photosArray = photosArray + images
-        collectionView.reloadData()
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
 }

@@ -6,23 +6,34 @@
 //  Copyright © 2017 Impulse. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import SVProgressHUD
 
-class InfoViewController: BaseViewController,UIWebViewDelegate {
+class InfoViewController: UIViewController,UIWebViewDelegate {
     
     @IBOutlet weak var titleService: UILabel!
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     
-    var infoTitle:String = ""
-    var serviceTitle:String = ""
-    var HTMLText:String = ""
+    var infoTitle = ""
+    var serviceTitle = ""
+    var HTMLText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setTitle(titleString: infoTitle)
-        self.titleService.text = serviceTitle
-        let formatedText = HTMLText.htmlFormattedString(font: UIFont.init(name: "SFUIText-Regular", size: 16)!, color: UIColor.defaultBlueColor())
+        setupNavigationBar()
+        setTitle(titleString: infoTitle)
+        if serviceTitle == "" { topConstraint.constant = 0 }
+        titleService?.text = serviceTitle
+        let formatedText = HTMLText.htmlFormattedString(font: UIFont(name: "SFUIText-Regular", size: 16)!, color: .defaultBlueColor)
         webView.loadHTMLString(formatedText, baseURL: nil)
+        webView.delegate = self
+        SVProgressHUD.show()
+    }
+    
+//MARK: - UIWebViewDelegate
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        SVProgressHUD.dismiss()
     }
 }

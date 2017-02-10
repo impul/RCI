@@ -34,18 +34,17 @@
 		2A5E88A91E4CE09D00BF925D /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E88A81E4CE09D00BF925D /* ServicesViewController.swift */; };
 		2A5E88AB1E4CF1AC00BF925D /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E88AA1E4CF1AC00BF925D /* InfoTableViewController.swift */; };
 		2A5E88AF1E4D1C9700BF925D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E88AE1E4D1C9700BF925D /* Service.swift */; };
-		2A6748051E4B1D930090D62E /* KeyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6748041E4B1D930090D62E /* KeyFile.swift */; };
 		2A6748081E4B1DA20090D62E /* SFUIText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */; };
 		2A6748091E4B1DA20090D62E /* SFUIText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */; };
 		D0584706812E7BCF90FA2B82 /* Pods_RCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0BBE3248741E058B1D407F /* Pods_RCI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A26D9E51E4D20D9002EC27F /* JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONJoy.swift; sourceTree = "<group>"; };
+		2A26D9E51E4D20D9002EC27F /* JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONJoy.swift; path = Managers/JSONJoy.swift; sourceTree = "<group>"; };
 		2A26D9E71E4D2100002EC27F /* HTTPDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPDictionary.swift; path = Extentios/HTTPDictionary.swift; sourceTree = "<group>"; };
 		2A26D9E81E4D2100002EC27F /* TextViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewColor.swift; path = Extentios/TextViewColor.swift; sourceTree = "<group>"; };
 		2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Light.otf"; path = "Resourses/Fonts/SFUIText-Light.otf"; sourceTree = "<group>"; };
-		2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
 		2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoyalAssistViewController.swift; sourceTree = "<group>"; };
 		2A37DD801E4A788A00413601 /* ReportAccidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportAccidentViewController.swift; sourceTree = "<group>"; };
 		2A37DD841E4A82C500413601 /* SFUIText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Semibold.otf"; path = "Resourses/Fonts/SFUIText-Semibold.otf"; sourceTree = "<group>"; };
@@ -73,7 +72,6 @@
 		2A5E88A81E4CE09D00BF925D /* ServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServicesViewController.swift; path = Service/ServicesViewController.swift; sourceTree = "<group>"; };
 		2A5E88AA1E4CF1AC00BF925D /* InfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoTableViewController.swift; path = Service/InfoTableViewController.swift; sourceTree = "<group>"; };
 		2A5E88AE1E4D1C9700BF925D /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		2A6748041E4B1D930090D62E /* KeyFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyFile.swift; path = Resourses/KeyFile.swift; sourceTree = "<group>"; };
 		2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Medium.otf"; path = "Resourses/Fonts/SFUIText-Medium.otf"; sourceTree = "<group>"; };
 		2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Regular.otf"; path = "Resourses/Fonts/SFUIText-Regular.otf"; sourceTree = "<group>"; };
 		2A8DDEDC1E49DDCA0035E4DF /* RCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,7 +105,6 @@
 		2A37DD751E4A3BFB00413601 /* Resoruses */ = {
 			isa = PBXGroup;
 			children = (
-				2A6748041E4B1D930090D62E /* KeyFile.swift */,
 				2A37DD761E4A3C1500413601 /* Fonts */,
 				2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */,
 			);
@@ -187,7 +184,6 @@
 		2A5AC7E91E4A0C2C00F7148C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				2A26D9E51E4D20D9002EC27F /* JSONJoy.swift */,
 				2A51C9D51E4B8084001A18DA /* APIManager.swift */,
 			);
 			path = Managers;
@@ -207,7 +203,6 @@
 				2A5E88A71E4CDD6200BF925D /* Services */,
 				2A51C9C41E4B5386001A18DA /* RoyalAssist */,
 				2A5AC7F51E4A104300F7148C /* MainViewController.swift */,
-				2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -232,6 +227,8 @@
 		2A5AC7EF1E4A0EA800F7148C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2A26D9E51E4D20D9002EC27F /* JSONJoy.swift */,
+				2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */,
 				2A26D9E71E4D2100002EC27F /* HTTPDictionary.swift */,
 				2A26D9E81E4D2100002EC27F /* TextViewColor.swift */,
 				2A51C9C71E4B7D1F001A18DA /* TPKeyboardAvoiding */,
@@ -422,7 +419,6 @@
 				2A51C9C61E4B6504001A18DA /* PhotoCell.swift in Sources */,
 				2A5E88AB1E4CF1AC00BF925D /* InfoTableViewController.swift in Sources */,
 				2A51C9D31E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				2A6748051E4B1D930090D62E /* KeyFile.swift in Sources */,
 				2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */,
 				2A51C9D61E4B8084001A18DA /* APIManager.swift in Sources */,
 				2A26D9E91E4D2100002EC27F /* HTTPDictionary.swift in Sources */,

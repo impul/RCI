@@ -15,14 +15,7 @@ class MainControllerCell : UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = UIColor.lightGray;
-        addGradientToCell()
+        self.backgroundColor = .lightGray;
     }
-    
-    func addGradientToCell() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.bounds
-        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.defaultBlueColor()]
-        self.layer.addSublayer(gradientLayer)
-    }
+
 }

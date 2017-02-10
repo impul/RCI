@@ -19,7 +19,7 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func deleteAction(_ sender: Any) {
-        delegate?.deletePhoto(atIndex: self.tag)
+        delegate?.deletePhoto(atIndex: tag)
     }
     
     override func prepareForReuse() {
