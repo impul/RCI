@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A20F3141E4E855900A76DAD /* AccidentInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20F3131E4E855900A76DAD /* AccidentInstructions.swift */; };
 		2A26D9E61E4D20D9002EC27F /* JSONJoy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26D9E51E4D20D9002EC27F /* JSONJoy.swift */; };
 		2A26D9E91E4D2100002EC27F /* HTTPDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26D9E71E4D2100002EC27F /* HTTPDictionary.swift */; };
 		2A26D9EA1E4D2100002EC27F /* TextViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26D9E81E4D2100002EC27F /* TextViewColor.swift */; };
+		2A304D761E4F0101002E7120 /* WhatToDoIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D751E4F0101002E7120 /* WhatToDoIf.swift */; };
+		2A304D781E4F29A3002E7120 /* CustomSegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D771E4F29A3002E7120 /* CustomSegmentControll.swift */; };
 		2A37DD791E4A3C7400413601 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */; };
 		2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */; };
 		2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */; };
@@ -40,9 +43,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A20F3131E4E855900A76DAD /* AccidentInstructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccidentInstructions.swift; sourceTree = "<group>"; };
 		2A26D9E51E4D20D9002EC27F /* JSONJoy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONJoy.swift; path = Managers/JSONJoy.swift; sourceTree = "<group>"; };
 		2A26D9E71E4D2100002EC27F /* HTTPDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPDictionary.swift; path = Extentios/HTTPDictionary.swift; sourceTree = "<group>"; };
 		2A26D9E81E4D2100002EC27F /* TextViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewColor.swift; path = Extentios/TextViewColor.swift; sourceTree = "<group>"; };
+		2A304D751E4F0101002E7120 /* WhatToDoIf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhatToDoIf.swift; path = WhatToDoIf/WhatToDoIf.swift; sourceTree = "<group>"; };
+		2A304D771E4F29A3002E7120 /* CustomSegmentControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentControll.swift; sourceTree = "<group>"; };
 		2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Light.otf"; path = "Resourses/Fonts/SFUIText-Light.otf"; sourceTree = "<group>"; };
 		2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
 		2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoyalAssistViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,14 @@
 				58729DB5D7A65D0D9DFE2DF6 /* Pods-RCI.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2A304D741E4F00E6002E7120 /* WhatToDoIf */ = {
+			isa = PBXGroup;
+			children = (
+				2A304D751E4F0101002E7120 /* WhatToDoIf.swift */,
+			);
+			name = WhatToDoIf;
 			sourceTree = "<group>";
 		};
 		2A37DD751E4A3BFB00413601 /* Resoruses */ = {
@@ -193,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5E88AE1E4D1C9700BF925D /* Service.swift */,
+				2A20F3131E4E855900A76DAD /* AccidentInstructions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +215,7 @@
 		2A5AC7EB1E4A0C2C00F7148C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A304D741E4F00E6002E7120 /* WhatToDoIf */,
 				2A5E88A71E4CDD6200BF925D /* Services */,
 				2A51C9C41E4B5386001A18DA /* RoyalAssist */,
 				2A5AC7F51E4A104300F7148C /* MainViewController.swift */,
@@ -211,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				2A5AC7ED1E4A0C2C00F7148C /* Cells */,
+				2A304D771E4F29A3002E7120 /* CustomSegmentControll.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,6 +440,8 @@
 				2A51C9D61E4B8084001A18DA /* APIManager.swift in Sources */,
 				2A26D9E91E4D2100002EC27F /* HTTPDictionary.swift in Sources */,
 				2A51C9D11E4B7D1F001A18DA /* TPKeyboardAvoidingScrollView.m in Sources */,
+				2A304D761E4F0101002E7120 /* WhatToDoIf.swift in Sources */,
+				2A20F3141E4E855900A76DAD /* AccidentInstructions.swift in Sources */,
 				2A26D9EA1E4D2100002EC27F /* TextViewColor.swift in Sources */,
 				2A5E88A91E4CE09D00BF925D /* ServicesViewController.swift in Sources */,
 				2A5AC7F61E4A104300F7148C /* MainViewController.swift in Sources */,
@@ -430,6 +449,7 @@
 				2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */,
 				2A51C9D21E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m in Sources */,
 				2A51C9D91E4BC754001A18DA /* InfoViewController.swift in Sources */,
+				2A304D781E4F29A3002E7120 /* CustomSegmentControll.swift in Sources */,
 				2A5AC7F41E4A0F2700F7148C /* AppColors.swift in Sources */,
 				2A5E88AF1E4D1C9700BF925D /* Service.swift in Sources */,
 				2A37DD811E4A788A00413601 /* ReportAccidentViewController.swift in Sources */,

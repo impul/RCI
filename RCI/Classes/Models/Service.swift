@@ -6,6 +6,8 @@
 //  Copyright © 2017 Impulse. All rights reserved.
 //
 
+import Foundation
+
 struct Service : JSONJoy {
     let id:Int
     let title:String

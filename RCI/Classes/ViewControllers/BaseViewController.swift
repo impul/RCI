@@ -17,15 +17,11 @@ extension UIViewController {
     }
 
     func rigthButtonAction() {
-        UIApplication.shared.keyWindow?.rootViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
+       _ = navigationController?.popToRootViewController(animated: true)
     }
     
     func backButtonAction() {
-        guard (self.navigationController?.viewControllers.count)! > 1 else {
-             self.dismiss(animated: true, completion: nil)
-            return
-        }
-        self.navigationController!.popViewController(animated: true)
+       _ = navigationController?.popViewController(animated: true)
     }
     
     func setTitle(titleString:String) {
@@ -37,10 +33,14 @@ extension UIViewController {
         self.navigationController?.navigationBar.backgroundColor = UIColor.white 
     }
     
-    func pushController(identifire:String) {
-        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: identifire) else {
-            return
-        }
-        self.navigationController?.pushViewController(controller, animated: true)
+    
+    func customPushController(controller:UIViewController) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    func customPushController(name:String) {
+        let controller: UIViewController = (storyboard?.instantiateViewController(withIdentifier: name))!
+        customPushController(controller: controller)
     }
 }

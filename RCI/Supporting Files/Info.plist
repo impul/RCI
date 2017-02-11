@@ -3,11 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Need acess to media library</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Need acess to media library</string>
+	<string>$(PRODUCT_NAME) photo use</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Need acess to your camera</string>
+	<string>$(PRODUCT_NAME) camera use</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

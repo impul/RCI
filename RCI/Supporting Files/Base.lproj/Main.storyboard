@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dTu-mY-uEL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="k4z-Rw-MDk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,6 +22,22 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="NXW-0M-o5A">
+            <objects>
+                <navigationController id="k4z-Rw-MDk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mjq-iw-tun">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dTu-mY-uEL" kind="relationship" relationship="rootViewController" id="G19-Bq-874"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaN-Je-POU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-475"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="ls7-UP-mRo">
             <objects>
@@ -111,6 +127,7 @@
                             <constraint firstItem="bJx-W3-j7B" firstAttribute="top" secondItem="NWj-hs-35g" secondAttribute="top" id="vEV-xn-7D3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9bA-Mh-rth"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQo-B0-0EF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,7 +225,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYw-MW-qtB">
-                                                <rect key="frame" x="122" y="38" width="132.5" height="20"/>
+                                                <rect key="frame" x="121.5" y="38" width="132.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="SFUIText-Medium" family="SF UI  Text" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -651,6 +668,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VvP-MO-hsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2957.5999999999999" y="-475.41229385307349"/>
+        </scene>
+        <!--What To Do If Controller-->
+        <scene sceneID="i0V-cX-l3Z">
+            <objects>
+                <viewController storyboardIdentifier="WhatToDoIfController" id="cdR-Ao-VFe" customClass="WhatToDoIfController" customModule="RCI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a3g-5L-oBc"/>
+                        <viewControllerLayoutGuide type="bottom" id="j4f-b9-eqD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dy0-uL-xdc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOp-0f-qwv" customClass="CustomSegmentControll" customModule="RCI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ILG-Ju-lSx"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Inj-tf-NZV">
+                                <rect key="frame" x="15" y="108" width="345" height="544"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.18823529410000001" green="0.16862745100000001" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Inj-tf-NZV" firstAttribute="top" secondItem="uOp-0f-qwv" secondAttribute="bottom" id="0cw-PB-fOd"/>
+                            <constraint firstItem="j4f-b9-eqD" firstAttribute="top" secondItem="Inj-tf-NZV" secondAttribute="bottom" constant="15" id="N3M-ax-aBA"/>
+                            <constraint firstItem="Inj-tf-NZV" firstAttribute="leading" secondItem="dy0-uL-xdc" secondAttribute="leading" constant="15" id="XeL-Ge-pdL"/>
+                            <constraint firstAttribute="trailing" secondItem="Inj-tf-NZV" secondAttribute="trailing" constant="15" id="c3d-0B-nBz"/>
+                            <constraint firstItem="uOp-0f-qwv" firstAttribute="top" secondItem="dy0-uL-xdc" secondAttribute="top" constant="64" id="qYs-PX-Avp"/>
+                            <constraint firstAttribute="trailing" secondItem="uOp-0f-qwv" secondAttribute="trailing" id="shU-X3-tlh"/>
+                            <constraint firstItem="uOp-0f-qwv" firstAttribute="leading" secondItem="dy0-uL-xdc" secondAttribute="leading" id="vdv-25-E7o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControll" destination="uOp-0f-qwv" id="NW0-lz-EaS"/>
+                        <outlet property="webView" destination="Inj-tf-NZV" id="Pyu-Lv-YMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GP7-zd-TjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1810" y="200"/>
         </scene>
     </scenes>
     <resources>

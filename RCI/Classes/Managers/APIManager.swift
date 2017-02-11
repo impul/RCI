@@ -26,6 +26,7 @@ class APIManager: NSObject {
         static let accidentReportURL = baseAPIURL + "accident_reports"
         static let aboutAssistURL = baseAPIURL + "about_royal_assist"
         static let servicesURL = baseAPIURL + "services?"
+        static let accidentInstructionsURL = baseAPIURL + "accident_instructions?"
     }
     
     struct Parametrs {
@@ -37,7 +38,9 @@ class APIManager: NSObject {
         static let sortColumn = "sort_column"
         static let sortType = "sort_type"
         static let serviceType =  "service_type"
-        
+        static let standartSortType = "asc"
+        static let standartSortColumn = "id"
+        static let standartPerPage = "999"
     }
     
     struct ServerResponce {
@@ -84,10 +87,12 @@ class APIManager: NSObject {
         }
     }
     
+//TODO: - Page loading
+    
     func getServices(withType:String, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
-        let parametrs = [Parametrs.perPage: "999",
-                         Parametrs.sortColumn: "id",
-                         Parametrs.sortType: "asc",
+        let parametrs = [Parametrs.perPage: Parametrs.standartPerPage ,
+                         Parametrs.sortColumn: Parametrs.standartSortColumn,
+                         Parametrs.sortType: Parametrs.standartSortType,
                          Parametrs.serviceType: withType]
         let URL = AppUrls.servicesURL + parametrs.stringFromHttpParameters()
         
@@ -113,5 +118,35 @@ class APIManager: NSObject {
         }
 
     }
+    
+    func getAccidentInstructions(completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
+        let parametrs = [Parametrs.perPage: Parametrs.standartPerPage,
+                         Parametrs.sortColumn: Parametrs.standartSortColumn,
+                         Parametrs.sortType: Parametrs.standartSortType]
+        let URL = AppUrls.accidentInstructionsURL + parametrs.stringFromHttpParameters()
+        
+        Alamofire.request(URL).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let dataArray:[Any] = (response.result.value as? [Any]) else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                var objectArray: [AccidentInstructions] = []
+                for obj in dataArray {
+                    do {
+                        let instructions = try AccidentInstructions(JSONDecoder(obj))
+                        objectArray.append(instructions)
+                    } catch {}
+                }
+                completion(objectArray,true)
+                break
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
+        }
+        
+    }
+
     
 }

@@ -6,7 +6,6 @@
 //  Copyright © 2017 Impulse. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SVProgressHUD
 
@@ -73,7 +72,7 @@ extension RoyalAssistViewController: UICollectionViewDelegate, UICollectionViewD
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: pushController(identifire: "ReportAccidentViewController")
+        case 0: customPushController(name: "ReportAccidentViewController")
             break
         case 1: makeACall()
             break
