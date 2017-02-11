@@ -13,6 +13,10 @@
 		2A26D9EA1E4D2100002EC27F /* TextViewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26D9E81E4D2100002EC27F /* TextViewColor.swift */; };
 		2A304D761E4F0101002E7120 /* WhatToDoIf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D751E4F0101002E7120 /* WhatToDoIf.swift */; };
 		2A304D781E4F29A3002E7120 /* CustomSegmentControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D771E4F29A3002E7120 /* CustomSegmentControll.swift */; };
+		2A304D7A1E4F6729002E7120 /* BaseCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D791E4F6729002E7120 /* BaseCollection.swift */; };
+		2A304D7D1E4F96E0002E7120 /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D7C1E4F96E0002E7120 /* AboutController.swift */; };
+		2A304D7F1E4F9D50002E7120 /* BranchesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D7E1E4F9D50002E7120 /* BranchesController.swift */; };
+		2A304D811E4FCA3A002E7120 /* BranchesPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A304D801E4FCA3A002E7120 /* BranchesPoint.swift */; };
 		2A37DD791E4A3C7400413601 /* SFUIText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */; };
 		2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */; };
 		2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */; };
@@ -49,6 +53,10 @@
 		2A26D9E81E4D2100002EC27F /* TextViewColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextViewColor.swift; path = Extentios/TextViewColor.swift; sourceTree = "<group>"; };
 		2A304D751E4F0101002E7120 /* WhatToDoIf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WhatToDoIf.swift; path = WhatToDoIf/WhatToDoIf.swift; sourceTree = "<group>"; };
 		2A304D771E4F29A3002E7120 /* CustomSegmentControll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentControll.swift; sourceTree = "<group>"; };
+		2A304D791E4F6729002E7120 /* BaseCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseCollection.swift; path = ../BaseCollection.swift; sourceTree = "<group>"; };
+		2A304D7C1E4F96E0002E7120 /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutController.swift; path = About/AboutController.swift; sourceTree = "<group>"; };
+		2A304D7E1E4F9D50002E7120 /* BranchesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BranchesController.swift; path = About/BranchesController.swift; sourceTree = "<group>"; };
+		2A304D801E4FCA3A002E7120 /* BranchesPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchesPoint.swift; sourceTree = "<group>"; };
 		2A37DD781E4A3C7300413601 /* SFUIText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Light.otf"; path = "Resourses/Fonts/SFUIText-Light.otf"; sourceTree = "<group>"; };
 		2A37DD7A1E4A4C2300413601 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = ViewControllers/BaseViewController.swift; sourceTree = "<group>"; };
 		2A37DD7C1E4A504B00413601 /* RoyalAssistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoyalAssistViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +122,15 @@
 				2A304D751E4F0101002E7120 /* WhatToDoIf.swift */,
 			);
 			name = WhatToDoIf;
+			sourceTree = "<group>";
+		};
+		2A304D7B1E4F96B2002E7120 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				2A304D7C1E4F96E0002E7120 /* AboutController.swift */,
+				2A304D7E1E4F9D50002E7120 /* BranchesController.swift */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 		2A37DD751E4A3BFB00413601 /* Resoruses */ = {
@@ -208,6 +225,7 @@
 			children = (
 				2A5E88AE1E4D1C9700BF925D /* Service.swift */,
 				2A20F3131E4E855900A76DAD /* AccidentInstructions.swift */,
+				2A304D801E4FCA3A002E7120 /* BranchesPoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,9 +233,11 @@
 		2A5AC7EB1E4A0C2C00F7148C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A304D7B1E4F96B2002E7120 /* About */,
 				2A304D741E4F00E6002E7120 /* WhatToDoIf */,
 				2A5E88A71E4CDD6200BF925D /* Services */,
 				2A51C9C41E4B5386001A18DA /* RoyalAssist */,
+				2A304D791E4F6729002E7120 /* BaseCollection.swift */,
 				2A5AC7F51E4A104300F7148C /* MainViewController.swift */,
 			);
 			path = ViewControllers;
@@ -431,11 +451,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A51C9D01E4B7D1F001A18DA /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				2A304D7F1E4F9D50002E7120 /* BranchesController.swift in Sources */,
+				2A304D7D1E4F96E0002E7120 /* AboutController.swift in Sources */,
 				2A26D9E61E4D20D9002EC27F /* JSONJoy.swift in Sources */,
+				2A304D811E4FCA3A002E7120 /* BranchesPoint.swift in Sources */,
 				2A5AC7F81E4A13C900F7148C /* MainControllerCell.swift in Sources */,
 				2A51C9C61E4B6504001A18DA /* PhotoCell.swift in Sources */,
 				2A5E88AB1E4CF1AC00BF925D /* InfoTableViewController.swift in Sources */,
 				2A51C9D31E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				2A304D7A1E4F6729002E7120 /* BaseCollection.swift in Sources */,
 				2A37DD7D1E4A504B00413601 /* RoyalAssistViewController.swift in Sources */,
 				2A51C9D61E4B8084001A18DA /* APIManager.swift in Sources */,
 				2A26D9E91E4D2100002EC27F /* HTTPDictionary.swift in Sources */,

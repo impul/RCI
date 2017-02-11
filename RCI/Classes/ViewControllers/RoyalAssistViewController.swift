@@ -11,14 +11,13 @@ import SVProgressHUD
 
 let supportPhoneNumber = "77777773"
 
-class RoyalAssistViewController: UIViewController  {
-    
-    let titleArray = ["REPORT AN ACCIDENT", "MAKE A CALL", "ABOUT ROYAL ASSIST"]
+final class RoyalAssistViewController: BaseCollection  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupWith(titles: ["REPORT AN ACCIDENT", "MAKE A CALL", "ABOUT ROYAL ASSIST"], delegate: self)
         setupNavigationBar()
-        setTitle(titleString: "Royal asset")
+        setTitle(titleString: "Royal assist")
     }
     
     func showInfo() {
@@ -45,30 +44,6 @@ class RoyalAssistViewController: UIViewController  {
         guard (application.canOpenURL(phoneCallURL)) else  { return }
         application.open(phoneCallURL, options:[:], completionHandler: nil)
     }
-}
-
-extension RoyalAssistViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-
-//MARK: - UICollectionViewDataSource
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MainControllerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainControllerCell", for: indexPath) as! MainControllerCell
-        cell.imageView.image = UIImage(named: titleArray[indexPath.row])
-        cell.titleLable.text = titleArray[indexPath.row]
-        return cell;
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titleArray.count
-    }
-    
-//MARK: - UICollectionViewDelegate
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.size.width, height:(collectionView.frame.size.height-83.0)/3.0)
-    }
-
-//MARK: - UICollectionViewDelegateFlowLayout
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {

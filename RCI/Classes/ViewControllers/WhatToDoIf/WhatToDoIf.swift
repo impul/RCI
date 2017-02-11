@@ -52,6 +52,7 @@ extension WhatToDoIfController : UIWebViewDelegate, CustomSegmentControllProtoco
     func webViewDidFinishLoad(_ webView: UIWebView) {
         SVProgressHUD.dismiss()
     }
+
     
 //MARK: - CustomSegmentControllProtocol
     

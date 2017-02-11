@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 extension UIViewController {
     func setupNavigationBar () {
@@ -17,10 +18,12 @@ extension UIViewController {
     }
 
     func rigthButtonAction() {
+         SVProgressHUD.dismiss()
        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     func backButtonAction() {
+         SVProgressHUD.dismiss()
        _ = navigationController?.popViewController(animated: true)
     }
     

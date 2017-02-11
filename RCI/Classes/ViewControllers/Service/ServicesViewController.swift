@@ -14,14 +14,14 @@ struct ServiceType {
     static let business = "business"
 }
 
-class ServicesViewController : UIViewController, InfoTableProtocol{
+final class ServicesViewController : BaseCollection, InfoTableProtocol{
     
     var infoItemArray:[Service] = []
-    let titleArray = ["BUSINESS", "PERSONAL"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupWith(titles: ["BUSINESS", "PERSONAL"], delegate: self)
         setTitle(titleString: "Servicess")
     }
     
@@ -54,28 +54,6 @@ class ServicesViewController : UIViewController, InfoTableProtocol{
         }
         return namesArray
     }
-}
-
-extension ServicesViewController :  UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-//MARK: - UICollectionViewDataSource
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: MainControllerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainControllerCell", for: indexPath) as! MainControllerCell
-        cell.imageView.image = UIImage(named: titleArray[indexPath.row])
-        cell.titleLable.text = titleArray[indexPath.row]
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titleArray.count
-    }
-    
-//MARK: - UICollectionViewDelegateFlowLayout
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.size.width, height:(collectionView.frame.size.height-73.0)/2.0)
-    }
     
 //MARK: - UICollectionViewDelegate
     
@@ -94,4 +72,5 @@ extension ServicesViewController :  UICollectionViewDelegate, UICollectionViewDa
             break
         }
     }
+    
 }

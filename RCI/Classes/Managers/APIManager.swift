@@ -27,6 +27,7 @@ class APIManager: NSObject {
         static let aboutAssistURL = baseAPIURL + "about_royal_assist"
         static let servicesURL = baseAPIURL + "services?"
         static let accidentInstructionsURL = baseAPIURL + "accident_instructions?"
+        static let branchesURL = baseAPIURL + "branches"
     }
     
     struct Parametrs {
@@ -137,6 +138,31 @@ class APIManager: NSObject {
                     do {
                         let instructions = try AccidentInstructions(JSONDecoder(obj))
                         objectArray.append(instructions)
+                    } catch {}
+                }
+                completion(objectArray,true)
+                break
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
+        }
+        
+    }
+    
+    func getBranches(completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
+
+        Alamofire.request(AppUrls.branchesURL).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let dataArray:[Any] = (response.result.value as? [Any]) else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                var objectArray: [BranchesPoint] = []
+                for obj in dataArray {
+                    do {
+                        let point = try BranchesPoint(JSONDecoder(obj))
+                        objectArray.append(point)
                     } catch {}
                 }
                 completion(objectArray,true)

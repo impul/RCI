@@ -36,4 +36,8 @@ class InfoViewController: UIViewController,UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         SVProgressHUD.dismiss()
     }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        SVProgressHUD.dismiss()
+    }
 }

@@ -43,13 +43,22 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            customPushController(name: "RoyalAssistViewController")
+            let controller: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "BaseCollection"))!
+            object_setClass(controller, RoyalAssistViewController.self)
+            customPushController(controller:controller)
             break
         case 2:
-            customPushController(name: "ServicesViewController")
+            let controller: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "BaseCollection"))!
+            object_setClass(controller, ServicesViewController.self)
+            customPushController(controller:controller)
             break
         case 3:
             whatToDoIfAction()
+            break
+        case 4:
+            let controller: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "BaseCollection"))!
+            object_setClass(controller, AboutController.self)
+            customPushController(controller:controller)
             break
         default:
             break
