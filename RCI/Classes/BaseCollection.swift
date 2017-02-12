@@ -39,6 +39,7 @@ extension BaseCollection: UICollectionViewDataSource, UICollectionViewDelegateFl
     //MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.size.width, height:(collectionView.frame.size.height-73.0)/CGFloat(titleArray.count))
+        return CGSize(width: view.frame.size.width,
+                      height: (collectionView.frame.size.height-62.0 - CGFloat((titleArray.count-1)*10) )/CGFloat(titleArray.count))
     }
 }

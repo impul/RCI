@@ -31,4 +31,9 @@ struct BranchesPoint : JSONJoy {
         latitude = try decoder["latitude"].get()
         longitude = try decoder["longitude"].get()
     }
+    
+    func getFormatedDescription() -> String {
+        return "\(title), \(address) \(postal_code) \nT: \(phone)\nF: \(fax)\nE: \(email)"
+    }
+
 }

@@ -36,15 +36,15 @@ final class ServicesViewController : BaseCollection, InfoTableProtocol{
     func getInfo(typeService: String, title:String) {
         APIManager.sharedInstance.getServices(withType: typeService) { [unowned self] (result, success) in
             SVProgressHUD.dismiss()
-            if success {
+            guard success else {
+                 SVProgressHUD.showError(withStatus: result as? String)
+                return
+            }
                 self.infoItemArray = result as! [Service]
                 let controller:InfoTableViewController = self.storyboard?.instantiateViewController(withIdentifier: "InfoTableViewController") as! InfoTableViewController
                 controller.setupController(info: self.generateNamesArray() , infoDelegate: self, title: title)
                 self.navigationController?.pushViewController(controller, animated: true)
-            } else {
-                SVProgressHUD.showError(withStatus: result as? String)
             }
-        }
     }
     
     func generateNamesArray() -> [String] {

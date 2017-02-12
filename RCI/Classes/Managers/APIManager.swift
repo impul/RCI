@@ -173,6 +173,24 @@ class APIManager: NSObject {
         }
         
     }
-
+    
+//MARK: - GoogleAPIs
+    func getDirections(origin:String, destination:String, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
+    let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=YOURKEY"
+    
+    Alamofire.request(url).responseJSON { response in
+    let json = JSON(data: response.data!)
+    let routes = json["routes"].arrayValue
+    
+    for route in routes
+    {
+    let routeOverviewPolyline = route["overview_polyline"].dictionary
+    let points = routeOverviewPolyline?["points"]?.stringValue
+    let path = GMSPath.init(fromEncodedPath: points!)
+    let polyline = GMSPolyline.init(path: path)
+    polyline.map = self.mapView
+    }
+    }
+    }
     
 }

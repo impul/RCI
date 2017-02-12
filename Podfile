@@ -11,7 +11,8 @@ target 'RCI' do
 	pod 'Fabric'
 	pod 'GoogleMaps'
 	pod 'ImagePicker'
-    pod 'TextFieldEffects'
-    pod 'Alamofire'
+   	pod 'TextFieldEffects'
+ 	pod 'Alamofire'
+       pod 'SwiftyJSON'
 
 end

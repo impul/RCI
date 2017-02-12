@@ -19,17 +19,18 @@ extension UIViewController {
 
     func rigthButtonAction() {
          SVProgressHUD.dismiss()
-       _ = navigationController?.popToRootViewController(animated: true)
+         _ =  navigationController?.popToRootViewController(animated: true)
     }
     
     func backButtonAction() {
          SVProgressHUD.dismiss()
-       _ = navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func setTitle(titleString:String) {
-        let title:UILabel = UILabel.init(frame:CGRect.init(x: 0.0, y: 0.0, width: 100.0, height: 40.0))
+        let title:UILabel = UILabel(frame:CGRect(x: 0.0, y: 0.0, width: 100.0, height: 40.0))
         title.text = titleString
+        title.textAlignment = .center
         title.font = UIFont(name: "SFUIText-Semibold", size: 17)
         title.textColor = UIColor.defaultBlueColor
         self.navigationItem.titleView = title
