@@ -31,6 +31,8 @@ class APIManager: NSObject {
         static let branchesURL = baseAPIURL + "branches"
         static let aboutUsURL = baseAPIURL + "about_us"
         static let questionnairesURL = baseAPIURL + "questionnaires"
+        static let questionnairesListURL = baseAPIURL + "questions?"
+        static let questionnaireResultsURL = baseAPIURL + "questionnaire_results"
         
     }
     
@@ -46,6 +48,9 @@ class APIManager: NSObject {
         static let standartSortType = "asc"
         static let standartSortColumn = "id"
         static let standartPerPage = "999"
+        static let questionnaireId = "questionnaire_id"
+        static let answers = "questionnaire_answers_attributes"
+        
     }
     
     struct ServerResponce {
@@ -73,7 +78,6 @@ class APIManager: NSObject {
                 completion(error.localizedDescription, false)
             }
         }
-        
     }
     
     func getAboutUs(completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
@@ -216,10 +220,48 @@ class APIManager: NSObject {
                 completion(error.localizedDescription, false)
             }
         }
-        
     }
     
-    //MARK: - GoogleAPIs
+    func getQuestionnariesList(withId:Int, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
+        let url = AppUrls.questionnairesListURL + [Parametrs.questionnaireId:withId].stringFromHttpParameters()
+        Alamofire.request(url).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let dataArray:[Any] = (response.result.value as? [Any]) else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                var objectArray: [SingleQuestion] = []
+                for obj in dataArray {
+                    do {
+                        let question = try SingleQuestion(JSONDecoder(obj))
+                        objectArray.append(question)
+                    } catch {}
+                }
+                completion(objectArray,true)
+                break
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
+        }
+    }
+    
+    func postQuestionnariesResult(id: Int, answers: [Any], completion:@escaping (_ message: Any, _ success:Bool) -> Void ) {
+        let parametrs = [Parametrs.questionnaireId: id,
+                         Parametrs.answers: answers] as [String : Any]
+        
+        Alamofire.request(AppUrls.questionnaireResultsURL , method:.post, parameters: parametrs, encoding: JSONEncoding.default, headers: nil).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                let json = response.result.value as? [String: Any]
+                completion(json as Any, true)
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
+        }
+    }
+    
+//MARK: - GoogleAPIs
     func getDirections(origin:String, destination:String, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
         let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyDKgaeXFwD9QSuomHxTwUTnrDgALDUzNA4"
         

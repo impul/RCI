@@ -36,12 +36,22 @@ class QuestionnairesList : UIViewController {
     
 }
 
-extension QuestionnairesList : UICollectionViewDelegate , UICollectionViewDataSource  {
+extension QuestionnairesList : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     
     //MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        SVProgressHUD.show()
+        APIManager.sharedInstance.getQuestionnariesList(withId: questionariesList[indexPath.row].id) { (result, success) in
+            SVProgressHUD.dismiss()
+            guard success else {
+                SVProgressHUD.showError(withStatus: result as! String)
+                return
+            }
+            let controller:QuestionariesTest = self.storyboard?.instantiateViewController(withIdentifier: "QuestionariesTest") as! QuestionariesTest
+            controller.setupController(questionsList: result as! [SingleQuestion], questionTitle: self.questionariesList[indexPath.row])
+            self.customPushController(controller: controller)
+        }
     }
     
     //MARK: - UICollectionViewDataSource
