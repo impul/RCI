@@ -7,12 +7,10 @@ target 'RCI' do
 
   # Pods for RCI
 	pod 'SVProgressHUD'
-	pod 'Crashlytics'
-	pod 'Fabric'
 	pod 'GoogleMaps'
 	pod 'ImagePicker'
    	pod 'TextFieldEffects'
  	pod 'Alamofire'
-       pod 'SwiftyJSON'
+    pod 'SwiftyJSON'
 
 end

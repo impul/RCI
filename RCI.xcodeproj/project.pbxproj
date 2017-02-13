@@ -148,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				2A37DD761E4A3C1500413601 /* Fonts */,
-				2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */,
 			);
 			name = Resoruses;
 			sourceTree = "<group>";
@@ -193,6 +192,7 @@
 		2A5AC7D81E4A0B9C00F7148C /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				2A5AC7DC1E4A0C2300F7148C /* Assets.xcassets */,
 				2A5AC7EE1E4A0C4000F7148C /* RCI-Bridging-Header.h */,
 				2A5AC7DB1E4A0C2300F7148C /* AppDelegate.swift */,
 				2A5AC7DD1E4A0C2300F7148C /* Base.lproj */,
