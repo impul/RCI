@@ -47,6 +47,9 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             object_setClass(controller, RoyalAssistViewController.self)
             customPushController(controller:controller)
             break
+        case 1:
+            UIApplication.shared.open(URL(string:"https://www.jccsmart.com/eBills/Welcome/Index/9634031")!, options: [:], completionHandler: nil)
+            break
         case 2:
             let controller: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "BaseCollection"))!
             object_setClass(controller, ServicesViewController.self)
@@ -59,6 +62,9 @@ extension MainViewController : UICollectionViewDataSource, UICollectionViewDeleg
             let controller: UIViewController = (storyboard?.instantiateViewController(withIdentifier: "BaseCollection"))!
             object_setClass(controller, AboutController.self)
             customPushController(controller:controller)
+            break
+        case 5:
+            customPushController(name: "QuestionnairesList")
             break
         default:
             break

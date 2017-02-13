@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import SVProgressHUD
+import SwiftyJSON
 
 class BranchesViewController : UIViewController {
     
@@ -18,6 +19,7 @@ class BranchesViewController : UIViewController {
     @IBOutlet weak var branchDescription: UILabel!
     @IBOutlet weak var buttomViewHeight: NSLayoutConstraint!
     
+    var way:[GMSPolyline] = []
     var map: GMSMapView?
     var currentBranch: BranchesPoint?
     var pointArray: [BranchesPoint] = []
@@ -62,12 +64,40 @@ class BranchesViewController : UIViewController {
             SVProgressHUD.showError(withStatus: "Cannot find location!")
             return
         }
-        let origin = "\(myLocation.latitude),\(myLocation.longitude)"
-        let destination = "\(currentBranch?.latitude),\(currentBranch?.longitude)"
         
-
+        guard let myDestination = currentBranch else {
+            SVProgressHUD.showError(withStatus: "Cannot find destination!")
+            return
+        }
+        
+        let origin = "\(myLocation.latitude),\(myLocation.longitude)"
+        let destination = "\(myDestination.latitude),\(myDestination.longitude)"
+        
+        APIManager.sharedInstance.getDirections(origin: origin, destination: destination) { (result, success) in
+            guard success else {
+                SVProgressHUD.showError(withStatus: "Cannot find way!")
+                return
+            }
+            
+            if self.way.count != 0 {
+                for line in self.way {
+                    line.map = nil
+                }
+            }
+            
+            self.way = []
+            for route in result as! [JSON]
+            {
+                let routeOverviewPolyline = route["overview_polyline"].dictionary
+                let points = routeOverviewPolyline?["points"]?.stringValue
+                let path = GMSPath(fromEncodedPath: points!)
+                let polyline = GMSPolyline(path: path)
+                polyline.map = self.map
+                self.way.append(polyline)
+            }
+        }
     }
-    
+
     @IBAction func changeSizeAction(_ sender: UIButton) {
         if sender.image(for: .normal) == #imageLiteral(resourceName: "icArrowDown") {
             sender.setImage(#imageLiteral(resourceName: "icArrowUp"), for: .normal)

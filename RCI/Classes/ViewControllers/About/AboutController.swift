@@ -25,15 +25,31 @@ final class AboutController : BaseCollection{
 //        controller.serviceTitle = info
 //        self.navigationController?.pushViewController(controller, animated: true)
     }
-
-
     
+    func showAboutUs() {
+        if SVProgressHUD.isVisible() {
+            return
+        }
+        SVProgressHUD.show()
+        APIManager.sharedInstance.getAboutUs { (result, succes) in
+            SVProgressHUD.dismiss()
+            guard succes else {
+                SVProgressHUD.showError(withStatus: result)
+                return
+            }
+            let controller:InfoViewController = (self.storyboard?.instantiateViewController(withIdentifier: "InfoViewController") as! InfoViewController)
+            controller.HTMLText = result
+            controller.infoTitle = "About us"
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+
     //MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        case 0: //getInfo(typeService: ServiceType.business, title: "Business")
+        case 0: showAboutUs()
             break
         case 1: customPushController(name:"BranchesViewController")
             break

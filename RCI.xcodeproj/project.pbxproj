@@ -43,6 +43,9 @@
 		2A5E88AF1E4D1C9700BF925D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5E88AE1E4D1C9700BF925D /* Service.swift */; };
 		2A6748081E4B1DA20090D62E /* SFUIText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */; };
 		2A6748091E4B1DA20090D62E /* SFUIText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */; };
+		2A7AC74A1E51214D008E9554 /* QuestionnairesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC7491E51214D008E9554 /* QuestionnairesList.swift */; };
+		2A7AC74C1E5121B7008E9554 /* QuestionnairesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC74B1E5121B7008E9554 /* QuestionnairesListCell.swift */; };
+		2A7AC74E1E512693008E9554 /* Questionnaires.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7AC74D1E512693008E9554 /* Questionnaires.swift */; };
 		D0584706812E7BCF90FA2B82 /* Pods_RCI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0BBE3248741E058B1D407F /* Pods_RCI.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,9 @@
 		2A5E88AE1E4D1C9700BF925D /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		2A6748061E4B1DA20090D62E /* SFUIText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Medium.otf"; path = "Resourses/Fonts/SFUIText-Medium.otf"; sourceTree = "<group>"; };
 		2A6748071E4B1DA20090D62E /* SFUIText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFUIText-Regular.otf"; path = "Resourses/Fonts/SFUIText-Regular.otf"; sourceTree = "<group>"; };
+		2A7AC7491E51214D008E9554 /* QuestionnairesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionnairesList.swift; path = Questionnaires/QuestionnairesList.swift; sourceTree = "<group>"; };
+		2A7AC74B1E5121B7008E9554 /* QuestionnairesListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionnairesListCell.swift; sourceTree = "<group>"; };
+		2A7AC74D1E512693008E9554 /* Questionnaires.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questionnaires.swift; sourceTree = "<group>"; };
 		2A8DDEDC1E49DDCA0035E4DF /* RCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58729DB5D7A65D0D9DFE2DF6 /* Pods-RCI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RCI/Pods-RCI.release.xcconfig"; sourceTree = "<group>"; };
 		976DA75A29B39A24C3FA8AA7 /* Pods-RCI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RCI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RCI/Pods-RCI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 				2A5E88AE1E4D1C9700BF925D /* Service.swift */,
 				2A20F3131E4E855900A76DAD /* AccidentInstructions.swift */,
 				2A304D801E4FCA3A002E7120 /* BranchesPoint.swift */,
+				2A7AC74D1E512693008E9554 /* Questionnaires.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 		2A5AC7EB1E4A0C2C00F7148C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A7AC7481E51212F008E9554 /* Questionnaires */,
 				2A304D7B1E4F96B2002E7120 /* About */,
 				2A304D741E4F00E6002E7120 /* WhatToDoIf */,
 				2A5E88A71E4CDD6200BF925D /* Services */,
@@ -257,6 +265,7 @@
 			children = (
 				2A5AC7F71E4A13C900F7148C /* MainControllerCell.swift */,
 				2A51C9C51E4B6504001A18DA /* PhotoCell.swift */,
+				2A7AC74B1E5121B7008E9554 /* QuestionnairesListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -281,6 +290,14 @@
 				2A5E88AA1E4CF1AC00BF925D /* InfoTableViewController.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		2A7AC7481E51212F008E9554 /* Questionnaires */ = {
+			isa = PBXGroup;
+			children = (
+				2A7AC7491E51214D008E9554 /* QuestionnairesList.swift */,
+			);
+			name = Questionnaires;
 			sourceTree = "<group>";
 		};
 		2A8DDED31E49DDC90035E4DF = {
@@ -455,7 +472,9 @@
 				2A304D7D1E4F96E0002E7120 /* AboutController.swift in Sources */,
 				2A26D9E61E4D20D9002EC27F /* JSONJoy.swift in Sources */,
 				2A304D811E4FCA3A002E7120 /* BranchesPoint.swift in Sources */,
+				2A7AC74A1E51214D008E9554 /* QuestionnairesList.swift in Sources */,
 				2A5AC7F81E4A13C900F7148C /* MainControllerCell.swift in Sources */,
+				2A7AC74C1E5121B7008E9554 /* QuestionnairesListCell.swift in Sources */,
 				2A51C9C61E4B6504001A18DA /* PhotoCell.swift in Sources */,
 				2A5E88AB1E4CF1AC00BF925D /* InfoTableViewController.swift in Sources */,
 				2A51C9D31E4B7D1F001A18DA /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
@@ -473,6 +492,7 @@
 				2A37DD7B1E4A4C2300413601 /* BaseViewController.swift in Sources */,
 				2A51C9D21E4B7D1F001A18DA /* TPKeyboardAvoidingTableView.m in Sources */,
 				2A51C9D91E4BC754001A18DA /* InfoViewController.swift in Sources */,
+				2A7AC74E1E512693008E9554 /* Questionnaires.swift in Sources */,
 				2A304D781E4F29A3002E7120 /* CustomSegmentControll.swift in Sources */,
 				2A5AC7F41E4A0F2700F7148C /* AppColors.swift in Sources */,
 				2A5E88AF1E4D1C9700BF925D /* Service.swift in Sources */,

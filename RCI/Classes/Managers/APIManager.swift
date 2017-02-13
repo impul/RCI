@@ -8,18 +8,19 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 private let sharedManager = APIManager()
 
 class APIManager: NSObject {
- 
-//MARK: - Singltone 
+    
+    //MARK: - Singltone
     
     class var sharedInstance: APIManager {
         return sharedManager
     }
     
-//MARK: - Constants
+    //MARK: - Constants
     static let baseAPIURL = "http://31.131.20.12:82/api/v1/"
     
     struct AppUrls {
@@ -28,6 +29,9 @@ class APIManager: NSObject {
         static let servicesURL = baseAPIURL + "services?"
         static let accidentInstructionsURL = baseAPIURL + "accident_instructions?"
         static let branchesURL = baseAPIURL + "branches"
+        static let aboutUsURL = baseAPIURL + "about_us"
+        static let questionnairesURL = baseAPIURL + "questionnaires"
+        
     }
     
     struct Parametrs {
@@ -47,8 +51,8 @@ class APIManager: NSObject {
     struct ServerResponce {
         static let wrondResponce = "Wrond server responce!"
     }
-
-//MARK: - APIRequests
+    
+    //MARK: - APIRequests
     
     func postAccident(name: String, regNumber: String, phone:String, photos: [Data],  completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
         let parametrs = [Parametrs.name: name,
@@ -64,12 +68,28 @@ class APIManager: NSObject {
                     completion(ServerResponce.wrondResponce, false)
                     return
                 }
-              completion(info, true)
+                completion(info, true)
             case .failure(let error):
                 completion(error.localizedDescription, false)
             }
         }
         
+    }
+    
+    func getAboutUs(completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
+        Alamofire.request(AppUrls.aboutUsURL).validate().responseJSON { response in
+            switch response.result {
+            case .success:
+                let json = response.result.value as? [String: Any]
+                guard let info = json?["about_us"]  as? String else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                completion(info, true)
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
+        }
     }
     
     func getAboutAccident(completion:@escaping (_ message:String, _ success:Bool) -> Void ) {
@@ -88,7 +108,7 @@ class APIManager: NSObject {
         }
     }
     
-//TODO: - Page loading
+    //TODO: - Page loading
     
     func getServices(withType:String, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
         let parametrs = [Parametrs.perPage: Parametrs.standartPerPage ,
@@ -97,7 +117,7 @@ class APIManager: NSObject {
                          Parametrs.serviceType: withType]
         let URL = AppUrls.servicesURL + parametrs.stringFromHttpParameters()
         
-       Alamofire.request(URL).validate().responseJSON { (response) in
+        Alamofire.request(URL).validate().responseJSON { (response) in
             switch response.result {
             case .success:
                 guard let dataArray:[Any] = (response.result.value as? [Any]) else {
@@ -117,7 +137,7 @@ class APIManager: NSObject {
                 completion(error.localizedDescription, false)
             }
         }
-
+        
     }
     
     func getAccidentInstructions(completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
@@ -150,7 +170,7 @@ class APIManager: NSObject {
     }
     
     func getBranches(completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
-
+        
         Alamofire.request(AppUrls.branchesURL).validate().responseJSON { (response) in
             switch response.result {
             case .success:
@@ -174,23 +194,44 @@ class APIManager: NSObject {
         
     }
     
-//MARK: - GoogleAPIs
+    func getQuestionnaries(completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
+        
+        Alamofire.request(AppUrls.questionnairesURL).validate().responseJSON { (response) in
+            switch response.result {
+            case .success:
+                guard let dataArray:[Any] = (response.result.value as? [Any]) else {
+                    completion(ServerResponce.wrondResponce, false)
+                    return
+                }
+                var objectArray: [Questionnaires] = []
+                for obj in dataArray {
+                    do {
+                        let point = try Questionnaires(JSONDecoder(obj))
+                        objectArray.append(point)
+                    } catch {}
+                }
+                completion(objectArray,true)
+                break
+            case .failure(let error):
+                completion(error.localizedDescription, false)
+            }
+        }
+        
+    }
+    
+    //MARK: - GoogleAPIs
     func getDirections(origin:String, destination:String, completion:@escaping (_ responce: Any, _ success:Bool) -> Void  ) {
-    let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=YOURKEY"
-    
-    Alamofire.request(url).responseJSON { response in
-    let json = JSON(data: response.data!)
-    let routes = json["routes"].arrayValue
-    
-    for route in routes
-    {
-    let routeOverviewPolyline = route["overview_polyline"].dictionary
-    let points = routeOverviewPolyline?["points"]?.stringValue
-    let path = GMSPath.init(fromEncodedPath: points!)
-    let polyline = GMSPolyline.init(path: path)
-    polyline.map = self.mapView
-    }
-    }
+        let url = "https://maps.googleapis.com/maps/api/directions/json?origin=\(origin)&destination=\(destination)&mode=driving&key=AIzaSyDKgaeXFwD9QSuomHxTwUTnrDgALDUzNA4"
+        
+        Alamofire.request(url).responseJSON { response in
+            let json = JSON(data: response.data!)
+            let routes = json["routes"].arrayValue
+            guard routes.count > 0 else {
+                completion ("",false)
+                return
+            }
+            completion(routes, true)
+        }
     }
     
 }
